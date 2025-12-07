@@ -9,7 +9,7 @@
 /*Cuerpo de la página.*/
 body {
     background-color: #f5f5f5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     min-height: 100vh;
@@ -17,19 +17,47 @@ body {
     flex-direction: column;
 }
 
-/*Encabezado de la página.*/
 #header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #333;
 }
 
-/*Titulo de la página.*/
-#header h1 {
+/*Encabezado de la página.*/
+#header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem, 2rem;
+}
+
+/* El título hereda la fuente y el color del header */
+#header #titulo h1 {
     color: white;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    margin: 0;
+}
+
+/* Lista horizontal */
+#opciones ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+/* Enlaces */
+#opciones a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: .5rem .8rem;
+    transition: background-color .3s, transform .2s;
+    border-radius: 5px;
+}
+
+/* Hover elegante */
+#opciones a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
 }
 
 /*Main*/
@@ -90,10 +118,18 @@ Y el borde lo ponemos en un tono morado*/
     font-weight: bold;
 }
 
+
 /*Ajustes para pantallas pequeñas.*/
 @media (max-width: 768px) {
-    #header h1 {
-        font-size: 1.8rem;
+    #header nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #opciones ul {
+        gap: 1rem;
     }
 
     #content {
