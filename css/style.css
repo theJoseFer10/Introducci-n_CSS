@@ -146,6 +146,19 @@ Y el borde lo ponemos en un tono morado*/
 }
 
 
+/*Seccion de codigo de ejemplos*/
+.code {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    overflow-x: auto; /* Permite scroll horizontal si el código es muy largo */
+    font-family: 'Consolas', 'Courier New', monospace; /* Usar una fuente monospace común */
+    line-height: 1.5; /* Ligeramente más espaciado para mejor legibilidad */
+    color: #333;
+    white-space: pre; /* Mantiene el formato de espaciado y saltos de línea del HTML */
+}
+
 
 /*Ajustes para pantallas pequeñas.*/
 @media (max-width: 768px) {
