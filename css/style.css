@@ -118,6 +118,34 @@ Y el borde lo ponemos en un tono morado*/
     font-weight: bold;
 }
 
+/*Boton de card o ejemplo.*/
+.btn-info{
+    background-color: #4a77ff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-info:hover{
+    background-color: #3b5ed0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*Efecto para simular que se pulsa el boton*/
+.btn-info:active{
+    background-color: #2c4da3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform:  translateY(1px);
+}
+
+
 
 /*Ajustes para pantallas pequeñas.*/
 @media (max-width: 768px) {
