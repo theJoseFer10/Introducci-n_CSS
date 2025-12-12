@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Felxbox y Grid.</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div id="titulo">
+                <h1>Tarea css.</h1>
+            </div>
+            <div id="opciones">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Contenido</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content">
+            <article class="info">
+                <h2>Ejemplo de flexbox.</h2>
+                <p>
+                    Un ejemplo básico de Flexbox es centrar elementos en una barra de navegación 
+                    o crear un grid de tarjetas, usando display: flex; en el contenedor para activar 
+                    el layout flexible, y luego propiedades como flex-direction (para filas o columnas), 
+                    justify-content (para el eje principal) y align-items (para el eje secundario) para 
+                    organizar los elementos hijos (ítems), permitiendo diseños adaptables y alineación 
+                    precisa sin float ni posicionamiento complejo
+                </p>
+                <pre class="code">
+                    <code>
+                        &lt;!--HTML de ejemplo.--&gt;
+                        &lt;nav class="navbar"&gt;
+                            &lt;a href="#"&gt; Inicio &lt;a&gt;
+                            &lt;a href="#"&gt; Conocenos &lt;a&gt;
+                            &lt;a href="#"&gt; Mapa &lt;a&gt;
+                            &lt;a href="#"&gt; Comentarios &lt;a&gt;
+                            &lt;a href="#"&gt; Menu &lt;a&gt;
+                        &lt;/nav&gt;
+
+                        &lt;!--CSS de ejemplo.--&gt;
+                        .navbar {
+                            display: flex; /* Activa Flexbox */
+                            justify-content: space-around; /* Distribuye espacio entre elementos */
+                            align-items: center; /* Centra verticalmente */
+                            background-color: #333;
+                            padding: 10px;
+                        }
+                        .navbar a {
+                            color: white;
+                            text-decoration: none;
+                            padding: 5px 10px;
+                        }
+
+                    </code>
+                </pre>
+
+                <h2>Ejemplo de grid.</h2>
+
+                <pre class="code">
+                    <code>
+                        &lt;!--HTMl de ejemplo.--&gt;
+                        &lt;div class="card-container"&gt;
+                            &lt;div class="card"&gt;
+                                &lt;h3&gt;Tarjeta 1&lt;/h3&gt;
+                                &lt;hp&gt;Texto tarjeta 1&lt;/hp&gt;
+                            &lt;/div&gt;
+                            &lt;div class="card"&gt;
+                                &lt;h3&gt;Tarjeta 2&lt;/h3&gt;
+                                &lt;hp&gt;Texto tarjeta 2&lt;/hp&gt;
+                            &lt;/div&gt;
+                            &lt;div class="card"&gt;
+                                &lt;h3&gt;Tarjeta 3&lt;/h3&gt;
+                                &lt;hp&gt;Texto tarjeta 3&lt;/hp&gt;
+                            &lt;/div&gt;
+                            &lt;div class="card"&gt;
+                                &lt;h3&gt;Tarjeta 4&lt;/h3&gt;
+                                &lt;hp&gt;Texto tarjeta 4&lt;/hp&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!--CSS de ejemplo.--&gt;
+                        .card-container {
+                            display: flex;
+                            flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea */
+                            gap: 20px; /* Espacio entre tarjetas */
+                            padding: 20px;
+                        }
+                        .card {
+                            flex: 1 1 300px; /* Crece, encoge, base de 300px */
+                            background-color: #f4f4f4;
+                            border: 1px solid #ddd;
+                            padding: 20px;
+                            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+                        }
+
+                    </code>
+                </pre>
+                <a href="../index.html" class="btn-info">Regresar</a>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

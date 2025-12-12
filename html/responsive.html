@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Reseponsividad</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div id="titulo">
+                <h1>Tarea css</h1>
+            </div>
+            <div id="opciones">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Contenido</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content">
+            <article class="info">
+                <h2>Diseño responsive</h2>
+                <p>
+                    Un ejemplo básico de Media Query en CSS usa
+                    @media para aplicar estilos condicionalmente, 
+                    como cambiar el color de fondo a azul (background-color: 
+                    blue;) cuando la pantalla es de 600px o menos (@media 
+                    (max-width: 600px)), o un diseño diferente para impresión 
+                    (@media print), permitiendo un diseño web responsivo y 
+                    adaptable a distintos dispositivos
+                </p>
+
+                <pre class="code">
+                    <code>
+                        /* Estilos por defecto (para pantallas anchas) */
+                        body {
+                        background-color: lightblue;
+                        font-size: 16px;
+                        }
+
+                        /* Media Query para pantallas pequeñas (móviles) */
+                        @media (max-width: 600px) {
+                        body {
+                            background-color: steelblue; /* Cambia a azul oscuro */
+                            font-size: 14px; /* Fuente más pequeña */
+                        }
+                        h1 {
+                            color: white; /* Título blanco en móvil */
+                        }
+                        }
+                    </code>
+                </pre>
+                <a href="../index.html" class="btn-info">Regresar</a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

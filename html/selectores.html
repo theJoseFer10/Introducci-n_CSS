@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Selectores</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div id="titulo">
+                <h1>Tarea css</h1>
+            </div>
+            <div id="opciones">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">contenido</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content">
+            <article class="info">
+                <h2>Ejemplo de selectorees en css.</h2>
+                <p>
+                    Con ayuda de los selectores podemos hacer referencia
+                    a elementos html y manipularlos en nuestro css, solo
+                    necesitamos en nuestro html una <b>clase</b> o un
+                    <b>id</b>. Y en nuestro css podemos referenciarlos con
+                    <b># para los id</b> y <b>. para las clases</b>.
+                </p>
+                <pre class="code">
+                    <code>
+                        &lt;!--HTML--&gt;
+                        &lt;div id="contenedor"&gt;
+                            Contenido de nuestro div.
+                        &lt;/div&gt;
+
+                        &lt;div clas="cajas"&gt;
+                            caja 1
+                        &lt;/div&gt;
+
+                        &lt;div clas="cajas"&gt;
+                            caja 2
+                        &lt;/div&gt;
+
+                        &lt;div clas="cajas"&gt;
+                            caja 3
+                        &lt;/div&gt;
+
+                        &lt;div clas="cajas"&gt;
+                            caja 4
+                        &lt;/div&gt;
+
+                        &lt;!--CSS--&gt;
+
+                        #contenedor{
+                            Estislo para el div con el id "contenedor"
+                        }
+
+                        .cajas{
+                            Estilo para los divs con la clase "cajas"
+                            Se aplica a cada elemento html con esa clase.
+                        }
+                    </code>
+                </pre>
+                <a href="../index.html" class="btn-info">Regresar</a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
