@@ -109,13 +109,53 @@ Y el borde lo ponemos en un tono morado*/
 }
 
 /*Pie de página.*/
-#footer_page {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
+#footer_page{
+    background-color: #3c444c;
+    color: #f8f9fa;
+    padding: 30px 20px;
     margin-top: auto;
-    font-weight: bold;
+    font-weight: 400;
+    border-top: 4px solid #4a77ff;
+}
+
+.footer_content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.sub_content{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.box-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+    width: auto;
+}
+
+.box-footer a{
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.box-footer a:hover{
+    color: #4a77ff;
+}
+
+.box-footer img{
+    width: 24px;
+    height: 24px;
 }
 
 /*Boton de card o ejemplo.*/
