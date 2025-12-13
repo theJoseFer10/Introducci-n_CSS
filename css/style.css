@@ -200,6 +200,34 @@ Y el borde lo ponemos en un tono morado*/
 }
 
 
+/*Boton flotante*/
+.btn-float{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    background-color: #4a77ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-float:hover{
+    background-color: #3b5ed0;
+    transform: translateY(-2px);
+}
+
+.btn-float .text-icon{
+    font-size: 1.5em;
+    line-height: 1;
+}
+
 /*Ajustes para pantallas pequeñas.*/
 @media (max-width: 768px) {
     #header nav {
