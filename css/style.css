@@ -192,13 +192,18 @@ Y el borde lo ponemos en un tono morado*/
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 15px;
-    overflow-x: auto; /* Permite scroll horizontal si el código es muy largo */
-    font-family: 'Consolas', 'Courier New', monospace; /* Usar una fuente monospace común */
-    line-height: 1.5; /* Ligeramente más espaciado para mejor legibilidad */
+    
+    /* CONTROL DE RESPONSIVIDAD */
+    overflow-x: auto;       /* Activa el scroll horizontal si el texto es ancho */
+    display: block;         /* Asegura que se comporte como bloque */
+    max-width: 100%;        /* No permite que sea más ancho que su padre */
+    white-space: pre-wrap;  /* OPCIONAL: Rompe las líneas automáticamente si no quieres scroll */
+    word-wrap: break-word;  /* Evita que palabras largas rompan el diseño */
+    
+    font-family: 'Consolas', 'Courier New', monospace;
+    line-height: 1.5;
     color: #333;
-    white-space: pre; /* Mantiene el formato de espaciado y saltos de línea del HTML */
 }
-
 
 /*Boton flotante*/
 .btn-float{
@@ -228,13 +233,77 @@ Y el borde lo ponemos en un tono morado*/
     line-height: 1;
 }
 
+/*Boton de menu de hamburgues.*/
+#menu-hamburguesa{
+    display: none;
+}
+
+/* Sidebar oculto a la izquierda */
+#sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Totalmente fuera de la pantalla */
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    z-index: 1000;
+    transition: left 0.3s ease; /* Esta es la magia del movimiento */
+    padding: 2rem;
+    display: block; /* Siempre bloque, el movimiento lo da 'left' */
+}
+
+/* Clase que activaremos con JS */
+#sidebar-mobile.active {
+    left: 0; /* Entra a la pantalla */
+}
+
+/* Estilos básicos para la lista interna */
+#sidebar-mobile ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar-mobile ul li {
+    margin-bottom: 1.5rem;
+}
+
+#sidebar-mobile ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Botón de cerrar dentro del sidebar */
+#close_sidebar {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 /*Ajustes para pantallas pequeñas.*/
 @media (max-width: 768px) {
     #header nav {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
         text-align: center;
         padding: 1rem;
+    }
+
+    #opciones{
+        display: none;
+    }
+
+    #menu-hamburguesa{
+        display: flex;
     }
 
     #opciones ul {
@@ -248,5 +317,17 @@ Y el borde lo ponemos en un tono morado*/
 
     main {
         padding: 1rem;
+    }
+
+    .info-content {
+        /* Cambia el 50% por 100% o auto para que el código tenga espacio */
+        width: 100%; 
+        max-width: 100%;
+        box-sizing: border-box; /* Asegura que el padding no sume al ancho */
+    }
+
+    .info {
+        width: 100%;
+        overflow: hidden; /* Evita que el hijo empuje al padre */
     }
 }
